@@ -3,7 +3,7 @@ const app = express();
 const cors = require('cors');
 const PORT = 8000;
 
-app.use(cors())
+app.use(cors());
 
 const winners = {
   'larry scott': {
@@ -116,11 +116,11 @@ const winners = {
   }
 }
 
-app.get('/', (req, res)=>{
+app.get('/', (req, res) => {
   res.sendFile(__dirname + '/index.html');
 })
 
-app.get('/api/:name', (req, res)=>{
+app.get('/api/:name', (req, res) => {
   const winnerName = req.params.name.toLowerCase();
   if (winners[winnerName]){
     res.json(winners[winnerName]);
@@ -129,6 +129,6 @@ app.get('/api/:name', (req, res)=>{
   }
 })
 
-app.listen(process.env.PORT || PORT, (req, res)=>{
+app.listen(process.env.PORT || PORT, (req, res) => {
   console.log(`The server is now running on ${PORT}`);
 })
