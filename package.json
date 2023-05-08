@@ -1,0 +1,15 @@
+{
+  "name": "mr-olympia-api",
+  "version": "1.0.0",
+  "description": "API with information about winners of the Mr. Olympia Bodybuilding Competition",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "author": "Korey Moore",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
